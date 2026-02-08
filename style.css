@@ -11,7 +11,7 @@ body {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .heart {
@@ -19,7 +19,7 @@ body {
     bottom: -30px;
     font-size: 22px;
     animation: floatUp linear forwards;
-    z-index: 0;
+    z-index: 1;
 }
 
 @keyframes floatUp {
@@ -50,7 +50,7 @@ body {
         inset 0 0 0 1px rgba(255,255,255,0.35);
 
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 
@@ -193,3 +193,4 @@ h1 {
         ) scale(1.4);
     }
 }
+
