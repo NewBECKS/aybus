@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Arka plan kalpleri */
+#heart-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: floatUp linear forwards;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Ana kutu */
+.container {
+    background: rgba(255, 255, 255, 0.78); /* dengeli şeffaflık */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 520px;
+    margin: auto;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.25),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Müzik */
+.muzik-btn {
+    margin-bottom: 20px;
+    padding: 10px 22px;
+    border-radius: 22px;
+    border: none;
+    background: #fff;
+    color: #e91e63;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+.mesaj {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.buton {
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#surpriz-mesaj {
+    margin-top: 15px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* Galeri */
+.galeri {
+    margin-top: 40px;
+}
+
+.fotolar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.foto {
+    width: 140px;
+    text-align: center;
+    color: #e91e63;
+}
+
+.foto img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 20px;
+}
+
+/* Final */
+.final-btn {
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#final-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.final-icerik {
+    background: white;
+    padding: 42px;
+    border-radius: 26px;
+    max-width: 420px;
+    font-size: 20px;
+    color: #e91e63;
+    line-height: 2;
+    text-align: center;
+}
+
+/* Kalp patlaması */
+.explosion-heart {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    pointer-events: none;
+    z-index: 3000;
+    animation: explode 2.5s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+        ) scale(1.4);
+    }
+}

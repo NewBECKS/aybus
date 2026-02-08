@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Büşranur ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arka plan kalpleri -->
+    <div id="heart-layer"></div>
+
+    <div class="container">
+
+        <!-- Müzik -->
+        <button class="muzik-btn" onclick="muzikBaslat()">🎶 Müziği Aç</button>
+        <audio id="bg-music" loop>
+            <source src="music/Love Story.mp3" type="audio/mpeg">
+        </audio>
+
+        <h1>Büşranur ❤️</h1>
+
+        <p class="mesaj">
+            14 Şubat Sevgililer Günü…<br>
+            Ama benim için senin olduğun her gün çok özel.
+        </p>
+
+        <p class="mesaj">
+            Tatlılığın, tenin ve kokun…<br>
+            Hayatımın en huzurlu yerisin.
+        </p>
+
+        <button class="buton" onclick="surpriz()">Sana Bir Sürprizim Var 💝</button>
+        <p id="surpriz-mesaj"></p>
+
+        <!-- Galeri -->
+        <div class="galeri">
+            <h2>Bizden Kareler 📸</h2>
+            <div class="fotolar">
+                <div class="foto">
+                    <img src="images/foto1.jpg" onclick="buyut(this)">
+                    <span>İlk günkü gülüşün</span>
+                </div>
+                <div class="foto">
+                    <img src="images/foto2.jpg" onclick="buyut(this)">
+                    <span>En huzurlu anım</span>
+                </div>
+                <div class="foto">
+                    <img src="images/foto3.jpg" onclick="buyut(this)">
+                    <span>Sen yanımdayken</span>
+                </div>
+                <div class="foto">
+                    <img src="images/foto4.jpg" onclick="buyut(this)">
+                    <span>Sen yanımdayken</span>
+                </div>
+                <div class="foto">
+                    <img src="images/foto5.jpg" onclick="buyut(this)">
+                    <span>Sen yanımdayken</span>
+                </div>
+                <div class="foto">
+                    <img src="images/foto6.jpg" onclick="buyut(this)">
+                    <span>Sen yanımdayken</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final -->
+        <button class="final-btn" onclick="finalAc()">Son Bir Mesajım Var 💌</button>
+
+    </div>
+
+    <!-- Fotoğraf büyütme -->
+    <div id="lightbox" onclick="kapat()">
+        <img id="lightbox-img">
+    </div>
+
+    <!-- Final Modal -->
+    <div id="final-modal" onclick="finalKapat()">
+        <div class="final-icerik" onclick="event.stopPropagation()">
+            <p id="final-metin"></p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
